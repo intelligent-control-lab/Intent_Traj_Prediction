@@ -1,1 +1,1 @@
-# Adaptable Human Intention and Trajectory Predictionfor Human-Robot Collaboration
+# Adaptable Human Intention and Trajectory Prediction for Human-Robot Collaboration
