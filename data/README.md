@@ -1,4 +1,5 @@
 ## Dataset for human-motion trajectory and intention prediction
+### Data Discription
 We designed a simple card-making task with a goal to make a Baymax birthday card. 
 <img src="https://github.com/intelligent-control-lab/Intent_Traj_Prediction/raw/master/demo/setup_card.png" width="600" >  
 The actions and their relationships are illustrated in following figure.   
@@ -9,3 +10,15 @@ We have grouped together the retraction motion from all the take actions (action
 In this task, all items are placed in fixed positions so that human intentions can be inferred purely from human trajectories.
 
 In the collection of the dataset, a Kinect V2 camera was used to capture the trajectories of human subjects' right arms at an approximate frequency of 20Hz. The human subjects are asked to perform the 12 pre-defined actions. 50 trajectories for each action were obtained from actor A (80\% offline training, 20\% offline validation). Another actor B repeated each action 10 times (100\% testing). 
+
+
+### Load the data
+```
+import joblib
+data_path='./human_kinect.pkl'
+data=joblib.load(data_path)
+train_data=data['train']
+valid_data=data['valid']
+test_data=data['test']
+print(train_data.keys())
+```
